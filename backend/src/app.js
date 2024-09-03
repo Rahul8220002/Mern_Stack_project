@@ -13,7 +13,7 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: process.env.CORS_ORIGIN,
+    origin:[process.env.CORS_ORIGIN],
     credentials: true,
   })
 );
@@ -28,6 +28,7 @@ app.post("/add", (req, res) => {
 
 app.use(cookiesparser());
 app.use(express.static("public"));
+app.use(express.urlencoded({ extended: true }));
 
 app.use(userRouter);
 app.use(productRouter);
