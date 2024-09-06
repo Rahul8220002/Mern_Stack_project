@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "http://localhost:5002";
+const BASE_URL = "https://e-commerce-mern-stack-gig3.onrender.com";
 
 const axiosInstance = axios.create();
 axiosInstance.defaults.baseURL = BASE_URL;
